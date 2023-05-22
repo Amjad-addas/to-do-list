@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesome cdn css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="header">
+                <h1>My To Do List</h1>
+             <!--   <div onclick="toggleFunction()" class="toggle-switch" id="toggle-switch"></div>-->
+            </div>
+            <div class="add-task">
+                <input type="text" id="add-task">               
+                <button onclick="addTask()" class="btn" id="add-btn">
+                    <i class="fas fa-plus-circle fa-lg"></i>
+                </button>
+                <div class="select">
+                    <select name="filter" id="filter" class="filter">
+                        <option value="all">All</option>
+                        <option value="completed">completed</option>
+                        <option value="incomplete">incompleted</option>
+                    </select>
+                </div>   
+            </div>
+            <div class="task-list">
+                <ul class="list" id="list"></ul>
+            </div>
+        </div>
+    </section>
+    <section class="clear" onclick="clearAll()">
+        <div class="container">
+            <div class="clear-all">
+                Clear All
+            </div>
+        </div>
+    </section>
+    <section class="counter">
+        <div class="container">
+            <div class="task">
+                <h4>task</h4>
+                <span id="task-counter">0</span>
+            </div>
+            <div class="complated">
+                <h4>complated</h4>
+                <span id="complated">0</span>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
